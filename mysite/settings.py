@@ -26,12 +26,13 @@ SECRET_KEY = 'django-insecure-rq=kk%dr#408!1c#h32e#4@fu2nj2+azsa%k0as_rp-$u_2&2(
 #DEBUG = True
 DEBUG = False
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['localhost','pythonanywhere.com','kake3380.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost','pythonanywhere.com','kake3380.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'myapp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
