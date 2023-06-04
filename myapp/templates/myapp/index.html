@@ -1,11 +1,5 @@
 {% load static %}
 
-{% for item in category %}
-    <p>{{item.name}}</p>
-
-{% endfor %}
-<p>TEST</p>
-
 <html lang="ja">
  <head>
  
@@ -82,46 +76,6 @@
 
 
 <div class="container">
-
-
-    <div class="row">
-        <div class="col-xs-6 col-lg-4 col-xl-4">
-          <div class="box" style="background-color:red">
-            <p>aaaaaaaaaaa</p>
-          </div>
-          
-        </div>
-        <div  class="col-xs-6 col-lg-4  col-xl-4">
-          <div class="box" style="background-color: aqua;">
-            <p>bbbbbbb</p>
-          </div>
-          
-        
-        </div>
-
-        <div class="col-xs-12 col-lg-4 col-xl-4">
-          <div class="box" style="background-color: bisque;">
-              <p>vvvv</p>
-          </div>
-          
-        </div>
-
-        <div class="col-xs-12 col-lg-4 col-xl-4">
-          <div class="box" style="background-color: bisque;">
-              <p>vvvv</p>
-          </div>
-          
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-<div class="container">
   <div class="row">
 
 
@@ -129,44 +83,20 @@
 
    <div class="col-4 my-4">
       <div class="card">
-        <img class="card-img-top" src="">
+        <!--<img class="card-img-top" src="">-->
         <div class="card-body">
           <h4 class="card-title"><p>{{item.name}}</p></h4>
     
-          <h6 class="card-subtitle">副見出し</h6>
-          <p class="card-text">カードの本文カードの本文カードの本文カードの本文カードの本文カードの本文カードの本文</p>
-          <a href="#" class="btn btn-dark">read more</a>
+          <h6 class="card-subtitle">{{item.subname}}</h6>
+          <p class="card-text">{{item.desc}}</p>
+          <a href="{% url 'myapp:product_detail' item.id %}" class="btn btn-dark">read more</a>
         </div>
       </div>
     </div>
 
     {% endfor %}
 
-    <div class="col-4 my-4">
-      <div class="card">
-       <div class="card-header">ヘッダー</div>
-        <img class="card-img-top" src="">
-        <div class="card-body">
-          <h4 class="card-title">タイトル</h4>
-          <h6 class="card-subtitle">副見出し</h6>
-          <p class="card-text">カードの本文カードの本文カードの本文カードの本文カードの本文カードの本文カードの本文</p>
-          <a href="#" class="btn btn-dark">read more</a>
-        </div>
-        <div class="card-footer">フッター</div>
-      </div>
-    </div>
-
-
     
-    <div class="col-4 my-4">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">タイトル</h4>
-          <h6 class="card-subtitle">副見出し</h6>
-          <p class="card-text">カードの本文カードの本文カードの本文カードの本文カードの本文カードの本文カードの本文</p>
-          <a href="#" class="btn btn-dark">read more</a>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </div>

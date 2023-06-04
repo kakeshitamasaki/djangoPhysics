@@ -10,3 +10,11 @@ def index(request):
         "category":category
     }
     return render(request,'myapp/index.html',context)
+
+
+def product_detail(request,id):
+
+    
+    
+    return render(request,'myapp/'+str(id)+'.html')
+
